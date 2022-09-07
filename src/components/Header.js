@@ -7,9 +7,16 @@ function Header() {
     <div className="header">
       <header>
         <nav>
-          <div className='dropdown-menu closed'>
-            <AiOutlineDown />
-            <p className='vetolib'>VetoLib</p>
+          <div className='dropdown-all'>
+            <div className='dropdown-menu closed'>
+              <AiOutlineDown />
+              <p className='vetolib'>VetoLib</p>
+            </div>
+            <div className='dropdown closed'>
+              <a className='carnet-link' href="/">Mon carnet</a>
+              <a className='historique-link' href="/">Mon historique</a>
+              <a className='contact-link' href="/">Contact</a>
+            </div>
           </div>
         </nav>
         <div className='logo-border'>

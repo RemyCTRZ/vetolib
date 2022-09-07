@@ -1,0 +1,23 @@
+.Carnet {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.carnet-titre {
+    margin: 2rem;
+    font-size: 1.3em;
+}
+
+.carnet-rdv {
+    height: 30rem;
+    width: 50rem;
+    background-color: #fff;
+    margin-bottom: 5rem;
+    z-index: 1;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.4) inset;
+}
