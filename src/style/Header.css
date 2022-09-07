@@ -1,0 +1,142 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: Fredoka;
+  src: url(../assets/fonts/Fredoka-VariableFont_wdth\,wght.ttf);
+}
+
+body {
+  --green: #46D967;
+  --red: #FF0000;
+  --bg-color: #F5F5F5;
+  --black: #333333;
+
+  background-color: var(--bg-color);
+  font-family: "Fredoka";
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 10rem;
+}
+
+.dropdown-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--green);
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.dropdown-menu svg {
+  color: #fff;
+  height: 100%;
+}
+
+.dropdown-menu.closed svg {
+  animation: arrow 1.4s infinite ease-in-out;
+}
+
+@keyframes arrow {
+  from {
+    opacity: 0;
+    transform: scale(1) translateY(-5px);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.7) translateY(5px);
+  }
+}
+
+.logo-border {
+  background-color: var(--green);
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  align-self: flex-start;
+}
+
+.logo {
+  height: 100%;
+}
+
+.login {
+  color: var(--green);
+  font-weight: 500;
+  text-underline-offset: 3px;
+  text-decoration: underline 2px;
+}
