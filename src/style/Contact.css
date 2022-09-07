@@ -1,0 +1,36 @@
+.Contact {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.contact-titre {
+    margin: 2rem;
+    font-size: 1.3em;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 30rem;
+    width: 30rem;
+    background-color: #fff;
+    margin-bottom: 5rem;
+    z-index: 1;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.4) inset;
+    padding: 3rem;
+    font-size: 1.5em;
+}
+
+.infos-contact {
+    font-size: 0.8em;
+    font-weight: 300;
+}
