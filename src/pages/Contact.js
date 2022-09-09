@@ -1,5 +1,5 @@
 import '../style/Contact.css';
-import { BsTelephoneFill, BsFacebook } from 'react-icons/bs';
+import { BsTelephoneFill } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
 
 function Contact() {
