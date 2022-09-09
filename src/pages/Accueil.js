@@ -11,7 +11,7 @@ function Accueil() {
             <section className="description">
                 <p className="titre-description">Gardez un oeil sur les rendez-vous de votre animal</p>
                 <article className="article">
-                    <p className="txt-article">Ne manquez aucun rendez-vous grace à votre carnet disponible sur notre site.
+                    <p className="txt-article">Ne manquez aucun rendez-vous avec votre carnet disponible sur notre site.
                         <br />Vous pouvez également retrouver les anciens rendez-vous dans la rubrique historique !</p>
                     <img className="img-article" src={dogPic} alt="chien" />
                 </article>

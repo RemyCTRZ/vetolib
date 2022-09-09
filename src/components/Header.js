@@ -1,6 +1,8 @@
 import logo from '../assets/img/dog_white.png';
 import { AiOutlineDown } from "react-icons/ai";
 import "../style/Header.css";
+import { NavLink } from 'react-router-dom';
+
 
 function Header() {
   return (
@@ -10,12 +12,12 @@ function Header() {
           <div className='dropdown-all'>
             <div className='dropdown-menu closed'>
               <AiOutlineDown />
-              <p className='vetolib'>VetoLib</p>
+              <NavLink className='vetolib' to="/">VetoLib</NavLink>
             </div>
             <div className='dropdown closed'>
-              <a className='carnet-link' href="/">Mon carnet</a>
-              <a className='historique-link' href="/">Mon historique</a>
-              <a className='contact-link' href="/">Contact</a>
+              <NavLink className='carnet-link' to="/carnet">Mon carnet</NavLink>
+              <NavLink className='historique-link' to="/historique">Mon historique</NavLink>
+              <NavLink to="/contact" className='contact-link'>Contact</NavLink>
             </div>
           </div>
         </nav>
@@ -23,7 +25,7 @@ function Header() {
           <img className='logo' src={logo} alt="logo vetolib" />
         </div>
         <div>
-          <a href="/" className='login'>Se connecter</a>
+          <a className='login' href="/">S'inscrire</a>
         </div>
       </header>
     </div>
