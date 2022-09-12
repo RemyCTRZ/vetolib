@@ -21,7 +21,7 @@ header {
   border-radius: 5rem;
   cursor: pointer;
   z-index: 2;
-  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
 }
 
 .dropdown-menu svg {
@@ -36,6 +36,10 @@ header {
 
 .dropdown-menu.closed svg {
   animation: arrow 1.4s infinite ease-in-out;
+}
+
+.dropdown.closed {
+  animation: scale-disappear 1s ease-in-out forwards;
 }
 
 @keyframes arrow {
@@ -70,38 +74,58 @@ header {
   left: 0;
   width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   justify-content: center;
   gap: .5rem;
   border-radius: 0 0 20px 20px;
-  padding: 2rem .5rem .5rem .5rem;
+  padding: 2rem .7rem .7rem .7rem;
   font-size: 1.2em;
   font-weight: 450;
-  animation: scale 1s ease-in-out;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
+  transform: scale(0);
 }
 
 .dropdown.closed {
   transform-origin: top center;
+  animation: scale-disappear .5s ease-in-out forwards;
 }
 
 .dropdown.open {
-  transform-origin: bottom center;
+  transform-origin: top center;
+  animation: scale-appear .5s ease-in-out forwards;
 }
 
-@keyframes scale {
+@keyframes scale-appear {
   0% {
-    transform: scaleY(0)
+    transform: scaleY(0);
+    opacity: 0;
   }
 
   80% {
-    transform: scaleY(1.1)
+    transform: scaleY(1.1);
   }
 
   100% {
-    transform: scaleY(1)
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-disappear {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
   }
 }
 
@@ -128,4 +152,7 @@ header {
   text-underline-offset: 3px;
   text-decoration: underline 2px;
   width: 10rem;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
 }

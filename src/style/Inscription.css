@@ -88,13 +88,13 @@
     font-size: .9em;
 }
 
-.inscription-mdp:focus + .info-bulle {
+.inscription-mdp:focus+.info-bulle {
     opacity: 0.9;
     visibility: visible;
 }
 
 .info-bulle::after {
-    content:"";
+    content: "";
     position: absolute;
     background-color: #fff;
     top: 50%;
@@ -109,4 +109,28 @@
 .obligatoire {
     font-size: .8em;
     color: #666;
+}
+
+
+.inscription-btn {
+    color: #fff;
+    background-color: #38ad52;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.inscription-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: .3rem .7rem;
+    background: var(--green);
+    color: white;
+    transform: translateY(-6px);
+}
+
+.inscription-btn:active .inscription-front {
+    transform: translateY(-2px);
 }

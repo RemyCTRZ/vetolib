@@ -68,3 +68,10 @@ body {
     font-family: "Fredoka";
     color: #333;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}

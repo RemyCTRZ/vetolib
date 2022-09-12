@@ -1,4 +1,5 @@
 import "../style/Inscription.css";
+import { AiOutlineRight } from "react-icons/ai";
 import { GoNote } from 'react-icons/go';
 
 function Inscription() {
@@ -19,6 +20,12 @@ function Inscription() {
                     </div>
                     <input type="password" placeholder="Confirmer le mot de passe *" className="inscription-mdp-verif"></input>
                     <p className="obligatoire">* Obligatoire</p>
+                    <button className="inscription-btn">
+                        <div className="inscription-front">
+                            <span className="inscription-btn-label">S'inscrire</span>
+                            <AiOutlineRight />
+                        </div>
+                    </button>
                 </article>
             </div>
         </section >
