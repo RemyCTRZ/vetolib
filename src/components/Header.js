@@ -10,7 +10,7 @@ function Header() {
 
   const user = {
     id: 1,
-    isAdmin: false,
+    isAdmin: true,
     isConnected: true,
     name: "Rémy"
   }
@@ -22,7 +22,7 @@ function Header() {
           <div className='dropdown-all'>
 
             <div className='dropdown-menu' onClick={Open}>
-              <AiOutlineDown />
+              <AiOutlineDown id="logo"/>
               <NavLink className='vetolib' to="/">VetoLib</NavLink>
             </div>
             {user.isAdmin ? (
@@ -45,7 +45,7 @@ function Header() {
         </div>
         {user.isConnected ? (
         <div>
-          <p className='logged' id="login" onClick={Login}>Bonjour <span className='username'>{user.name}</span></p>
+          <p className='logged' id="login">Bonjour <span className='username'>{user.name}</span></p>
         </div>
         ) : (
         <div>

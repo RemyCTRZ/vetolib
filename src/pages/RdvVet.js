@@ -21,13 +21,13 @@ function Carnet() {
             <p className='carnet-titre'>Prochains vaccins</p>
             <article className='carnet-rdv'>
                 {
-                    rendezVous.slice(0, 8).map((val, index) => {
+                    rendezVous.slice(-8).map((val, index) => {
 
                         let toto = new Date(val.rdv_date);
                         val.rdv_date = toto.toLocaleDateString("fr-FR")
 
                         return (
-                            <p key={index}>{val.rdv_date} | {val.rdv_motif} | {val.rdv_maladie}</p>
+                            <p key={index}>{val.animal_id} | {val.rdv_date} | {val.rdv_motif} | {val.rdv_maladie}</p>
                         );
                     })}
             </article>

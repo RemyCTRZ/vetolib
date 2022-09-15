@@ -58,7 +58,7 @@ app.get('/api/rdv', (req, res) => {
 
 app.get('/api/rdv-veterinaire', (req, res) => {
 
-    const sqlSelect = "SELECT rdv_date, rdv_motif, rdv_maladie FROM rdv INNER JOIN veterinaire WHERE veterinaire.id = rdv.vet_id";
+    const sqlSelect = "SELECT animal_id, rdv_date, rdv_motif, rdv_maladie FROM rdv INNER JOIN veterinaire WHERE veterinaire.id = rdv.vet_id";
 
     db.query(sqlSelect, (err, result) => {
         if (err) throw err;

@@ -25,7 +25,7 @@ function Inscription() {
     const user = {
         id: 1,
         isAdmin: true,
-        isConnected: true,
+        isConnected: false,
         name: "Rémy"
     }
 
@@ -41,22 +41,22 @@ function Inscription() {
                         </div>
                         <p className='inscription-titre'>Inscription</p>
                         <article className="inscription">
-                            <input type="text" placeholder="Nom *" className="inscription-nom" onChange={(e) => {
+                            <input type="text" required placeholder="Nom *" className="inscription-nom" onChange={(e) => {
                                 setNomMaitre(e.target.value)
                             }}></input>
-                            <input type="text" placeholder="Prénom *" className="inscription-prenom" onChange={(e) => {
+                            <input type="text" required placeholder="Prénom *" className="inscription-prenom" onChange={(e) => {
                                 setPrenomMaitre(e.target.value)
                             }}></input>
-                            <input type="email" placeholder="Email *" className="inscription-email" onChange={(e) => {
+                            <input type="email" required placeholder="Email *" className="inscription-email" onChange={(e) => {
                                 setEmailMaitre(e.target.value)
                             }}></input>
                             <div className="password-div">
-                                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe *" className="inscription-mdp" onChange={(e) => {
+                                <input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe *" className="inscription-mdp" onChange={(e) => {
                                     setMdpMaitre(e.target.value)
                                 }}></input>
                                 <p className="info-bulle">Votre mot de passe doit contenir au moins : <br />- 8 caractères<br />- une majuscule (A - Z)<br />- une minuscule (a - z)<br />- un numéro (0 - 9)</p>
                             </div>
-                            <input type="password" placeholder="Confirmer le mot de passe *" className="inscription-mdp-verif"></input>
+                            <input type="password" required placeholder="Confirmer le mot de passe *" className="inscription-mdp-verif"></input>
                             <p className="obligatoire">* Obligatoire</p>
                             <button className="inscription-btn" onClick={inscrire}>
                                 <div className="inscription-front">

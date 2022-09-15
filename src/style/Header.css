@@ -28,9 +28,17 @@ header > * {
   box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px;
 }
 
-.dropdown-menu svg {
+.dropdown-menu {
   color: #fff;
   height: 100%;
+}
+
+#logo {
+  transition: transform .5s ease-in-out;
+}
+
+.dropdown-menu .open {
+  transform: rotate(180deg);
 }
 
 .dropdown-all a {
