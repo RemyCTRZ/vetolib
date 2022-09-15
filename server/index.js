@@ -27,12 +27,38 @@ app.post('/api/insert', (req, res) => {
 
     db.query(sqlInsert, [animal_id, vet_id, rdv_date, rdv_motif, rdv_maladie], (err, result) => {
         console.log(result);
+        console.log("Rendez-vous programmé");
+    });
+});
+
+app.post('/api/signup', (req, res) => {
+
+    const maitre_nom = req.body.maitre_nom;
+    const maitre_prenom = req.body.maitre_prenom;
+    const maitre_email = req.body.maitre_email;
+    const maitre_mdp = req.body.maitre_mdp;
+
+    const sqlSignup = "INSERT INTO maitre (maitre_nom, maitre_prenom, maitre_email, maitre_mdp) VALUES (?,?,?,?);";
+
+    db.query(sqlSignup, [maitre_nom, maitre_prenom, maitre_email, maitre_mdp], (err, result) => {
+        console.log(result);
+        console.log("Profil créé");
     });
 });
 
 app.get('/api/rdv', (req, res) => {
 
-    const sqlSelect = "SELECT rdv_date, rdv_motif, rdv_maladie FROM rdv;";
+    const sqlSelect = "SELECT animal_id, rdv_date, rdv_motif, rdv_maladie FROM rdv;";
+
+    db.query(sqlSelect, (err, result) => {
+        if (err) throw err;
+        res.json(result);
+    })
+});
+
+app.get('/api/rdv-veterinaire', (req, res) => {
+
+    const sqlSelect = "SELECT rdv_date, rdv_motif, rdv_maladie FROM rdv INNER JOIN veterinaire WHERE veterinaire.id = rdv.vet_id";
 
     db.query(sqlSelect, (err, result) => {
         if (err) throw err;

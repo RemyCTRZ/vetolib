@@ -6,6 +6,10 @@ header {
   height: 5rem;
 }
 
+header > * {
+  width: 10rem;
+}
+
 .dropdown-menu {
   display: flex;
   position: relative;
@@ -155,4 +159,14 @@ header {
   border: none;
   background-color: unset;
   cursor: pointer;
+}
+
+.logged {
+  font-size: 1.3em;
+}
+
+.username {
+  color: var(--green);
+  font-weight: 400;
+  font-size: 1.4em;
 }

@@ -7,7 +7,7 @@ function Carnet() {
     const [rendezVous, setRendezVous] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/api/rdv')
+        axios.get('http://localhost:3001/api/rdv-veterinaire')
             .then((response) => {
                 setRendezVous(response.data);
             })
@@ -24,10 +24,10 @@ function Carnet() {
                     rendezVous.slice(0, 8).map((val, index) => {
 
                         let toto = new Date(val.rdv_date);
-                        val.rdv_date = toto.toLocaleDateString("fr-FR");
+                        val.rdv_date = toto.toLocaleDateString("fr-FR")
 
                         return (
-                            <p key={index}>{val.animal_id} | {val.rdv_date} | {val.rdv_motif} | {val.rdv_maladie}</p>
+                            <p key={index}>{val.rdv_date} | {val.rdv_motif} | {val.rdv_maladie}</p>
                         );
                     })}
             </article>

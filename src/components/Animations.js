@@ -2,8 +2,6 @@ export const Open = () => {
 
     let dropdown = document.getElementById("dropdown");
 
-    console.log(dropdown);
-
     if (dropdown.classList.contains("open")) {
         dropdown.classList.remove("open");
         dropdown.classList.add("closed");
