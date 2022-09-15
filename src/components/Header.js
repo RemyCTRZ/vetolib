@@ -11,7 +11,7 @@ function Header() {
   const user = {
     id: 1,
     isAdmin: true,
-    isConnected: true,
+    isConnected: false,
     name: "Rémy"
   }
 
