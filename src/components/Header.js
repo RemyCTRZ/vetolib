@@ -33,6 +33,7 @@ function Header() {
             ) : (
               <div className='dropdown' id="dropdown">
                 <NavLink className='carnet-link' to="/carnet">Mon carnet</NavLink>
+                <NavLink to="/profil" className='contact-link'>Mon profil</NavLink>
                 <NavLink to="/contact" className='contact-link'>Contact</NavLink>
               </div>
             )}

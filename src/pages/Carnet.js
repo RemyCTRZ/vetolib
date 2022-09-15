@@ -2,6 +2,10 @@ import '../style/Carnet.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
+    const animal = {
+        name:"Rex"
+    }
+
 function Carnet() {
 
     const [rendezVous, setRendezVous] = useState([]);
@@ -18,7 +22,7 @@ function Carnet() {
 
     return (
         <div className="Carnet">
-            <p className='carnet-titre'>Prochains vaccins</p>
+            <p className='carnet-titre'>Mon carnet - {animal.name}</p>
             <article className='carnet-rdv'>
                 {
                     rendezVous.slice(0, 8).map((val, index) => {
