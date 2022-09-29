@@ -31,6 +31,18 @@ app.post('/api/insert', (req, res) => {
     });
 });
 
+app.post('/api/delete-animal', (req, res) => {
+
+    const id = req.body.id;
+
+    const sqlDelete = "DELETE FROM animal WHERE ID = (?)";
+
+    db.query(sqlDelete, [id], (err, result) => {
+        console.log(result);
+        console.log("Animal supprimé");
+    });
+});
+
 app.post('/api/signup', (req, res) => {
 
     const maitre_nom = req.body.maitre_nom;

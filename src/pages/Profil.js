@@ -1,4 +1,6 @@
 import "../style/Profil.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const user = {
     id: 1,
@@ -10,6 +12,19 @@ const user = {
 }
 
 function Profil() {
+
+    const [idAnimal, setIdAnimal] = useState([]);
+
+    useEffect(() => {
+        axios.post('http://localhost:3001/api/delete-animal',
+            { id: idAnimal})
+            .then(() => {
+                alert('Successful delete');
+            }).catch(() => {
+                alert('Failed delete');
+            });
+    }, []);
+
     return (
         <div className="Profil">
             <p className='profil-titre'>Profil</p>

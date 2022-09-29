@@ -22,7 +22,7 @@ function Header() {
           <div className='dropdown-all'>
 
             <div className='dropdown-menu' onClick={Open}>
-              <AiOutlineDown id="logo"/>
+              <AiOutlineDown id="logo" />
               <NavLink className='vetolib' to="/">VetoLib</NavLink>
             </div>
             {user.isAdmin ? (
@@ -44,14 +44,14 @@ function Header() {
           <img className='logo' src={logo} alt="logo vetolib" />
         </div>
         {user.isConnected ? (
-        <div>
-          <p className='logged' id="login">Bonjour <span className='username'>{user.name}</span></p>
-        </div>
+          <div>
+            <p className='logged' id="login">Bonjour <span className='username'>{user.name}</span></p>
+          </div>
         ) : (
-        <div>
-          <button className='login' id="login" onClick={Login}>Se connecter</button>
-          <Connexion />
-        </div>
+          <div>
+            <button className='login' id="login" onClick={Login}>Se connecter</button>
+            <Connexion />
+          </div>
         )}
       </header>
     </div>
